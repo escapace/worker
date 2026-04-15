@@ -1,15 +1,21 @@
 {
   "builds": {
-    "browser": {
+    "neutral": {
       "define": {
         "__ENVIRONMENT__": "\"production\"",
-        "__PLATFORM__": "\"browser\""
+        "__PLATFORM__": "\"neutral\""
       },
       "entryPoints": ["src/index.ts"],
-      "mainFields": ["module", "browser", "main"],
-      "outdir": "lib/browser",
-      "platform": "browser",
-      "target": ["chrome130", "firefox132", "edge130", "opera113", "safari18.1"]
+      "mainFields": ["module", "main"],
+      "outdir": "lib/neutral",
+      "platform": "neutral",
+      "target": ["es2020"]
     }
+  },
+  "declaration": {
+    "declarationRollup": true,
+    "documentation": true,
+    "entryPoints": ["src/index.ts"],
+    "tsconfig": "tsconfig-build.json"
   }
 }

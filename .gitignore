@@ -1,5 +1,7 @@
+.aider*
 .cache
 .cache/
+.claude/*.local.json
 .docusaurus
 .dynamodb/
 .env
@@ -8,8 +10,10 @@
 .env.production.local
 .env.test.local
 .eslintcache
+.firecrawl/
 .fusebox/
 .grunt
+.lake/
 .lock-wscript
 .next
 .node_repl_history
