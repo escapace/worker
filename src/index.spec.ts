@@ -2,7 +2,7 @@ import { describe, expect, expectTypeOf, it } from 'vitest'
 import { createWorkerScope, isDedicatedWorkerGlobalScope } from './index'
 import type { CreateWorkerScopeOptions, SyntheticWorker, SyntheticWorkerScope } from './index'
 
-describe('@escapace/web-worker-tools', () => {
+describe('@escapace/worker', () => {
   it('exports the worker helpers', () => {
     expect(createWorkerScope).toBeTypeOf('function')
     expect(isDedicatedWorkerGlobalScope).toBeTypeOf('function')

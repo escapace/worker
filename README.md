@@ -1,4 +1,4 @@
-# @escapace/web-worker-tools
+# @escapace/worker
 
 `createWorkerScope()` lets one message-driven worker module run in three branches: a real browser dedicated worker, a Node worker-thread bridge, or an in-process synthetic fallback. The library keeps that overlap narrow on purpose, so shared worker code can be reused without claiming full worker-runtime emulation.
 
@@ -7,7 +7,7 @@ That matters when the same worker entry module needs to run in a browser worker,
 ## Install
 
 ```sh
-pnpm add @escapace/web-worker-tools
+pnpm add @escapace/worker
 ```
 
 ## Runtime model
@@ -45,7 +45,7 @@ The default in-process trade-off preserves local object identity and accepts non
 If stronger worker parity is needed in the in-process branch, opt in explicitly:
 
 ```ts
-import { createWorkerScope } from '@escapace/web-worker-tools'
+import { createWorkerScope } from '@escapace/worker'
 
 const worker = createWorkerScope(
   ({ scope }) => {
@@ -106,7 +106,7 @@ The examples use one shared module and different runtime wiring around it.
 
 ```ts
 // echo-worker.ts
-import { createWorkerScope } from '@escapace/web-worker-tools'
+import { createWorkerScope } from '@escapace/worker'
 
 export const worker = createWorkerScope(({ scope }) => {
   scope.addEventListener('message', (event) => {
@@ -164,7 +164,7 @@ Node worker threads still use the synthetic scope because they do not expose `De
 
 ```ts
 // thread-worker.ts
-import { createWorkerScope } from '@escapace/web-worker-tools'
+import { createWorkerScope } from '@escapace/worker'
 
 export const worker = createWorkerScope(({ scope }) => {
   scope.addEventListener('message', (event) => {
