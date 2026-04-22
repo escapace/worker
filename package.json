@@ -18,18 +18,22 @@
     "eslint": "10.2.0",
     "eslint-config-escapace": "5.16.1",
     "esroll": "1.2.0",
-    "knip": "6.3.1",
+    "knip": "6.4.1",
     "lefthook": "2.1.5",
     "playwright": "1.59.1",
-    "prettier": "3.8.1",
+    "prettier": "3.8.3",
     "prettier-config-escapace": "1.2.2",
     "syncpack": "14.3.0",
     "tsx": "4.21.0",
     "typescript": "6.0.2",
     "vitest": "4.1.4"
   },
-  "engines": {
-    "pnpm": ">=10.33.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "onFail": "warn",
+      "version": "^10.33.0"
+    }
   },
   "exports": {
     ".": {

@@ -15,11 +15,11 @@
   "ignore": ["**/*.d.+([a-zA-Z0-9]).ts", "**/*.d.ts", "lib/**"],
   "ignoreBinaries": ["ncu", "taze"],
   "ignoreDependencies": [
-    "playwright",
     "@commitlint/cli",
     "@escapace/syncpack-configuration",
     "@microsoft/api-extractor",
     "eslint-config-escapace",
+    "playwright",
     "prettier",
     "syncpack"
   ],
