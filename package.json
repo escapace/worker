@@ -16,7 +16,7 @@
     "@vitest/browser-playwright": "4.1.4",
     "@vitest/coverage-v8": "4.1.4",
     "eslint": "10.2.0",
-    "eslint-config-escapace": "5.16.1",
+    "eslint-config-escapace": "5.17.0",
     "esroll": "1.2.1",
     "knip": "6.4.1",
     "lefthook": "2.1.6",
